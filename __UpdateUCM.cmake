@@ -5,7 +5,7 @@ if(NOT THIRD_PARTY_GIT_DIR)
  set(THIRD_PARTY_GIT_DIR ${CMAKE_BINARY_DIR}/_ThirdPartyGit CACHE INTERNAL "" FORCE)
 endif()
 
-
+file(REMOVE_RECURSE ${THIRD_PARTY_GIT_DIR}/ucm/)
 git_clone(
         PROJECT_NAME    ucm
         GIT_URL         https://github.com/onqtam/ucm.git

@@ -32,7 +32,7 @@ if(GumboParserGit_CLONE_RESULT)
 	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "\ttarget_include_directories(Gumbo_Parser PRIVATE \${CMAKE_CURRENT_SOURCE_DIR}/visualc/include/)\n")
 	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "\ttarget_sources(Gumbo_Parser PRIVATE visualc/include/strings.h)\nendif()\n\n")
 	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "add_library(Gumbo::Parser ALIAS Gumbo_Parser)\n")
-	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "SET_TARGET_PROPERTIES (Gumbo_Query PROPERTIES FOLDER Gumbo)\n")
+	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "SET_TARGET_PROPERTIES (Gumbo_Parser PROPERTIES FOLDER Gumbo)\n")
 		
 	
 	

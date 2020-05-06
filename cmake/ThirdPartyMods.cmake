@@ -14,6 +14,7 @@ endif()
 
 
 function(AddThirdPartyMod ModName)
+	file(REMOVE_RECURSE ${THIRD_PARTY_GIT_DIR}/init_${ModName}/)
 	git_clone(
 			PROJECT_NAME    init_${ModName}
 			GIT_URL         https://github.com/Chuvi-w/ThirdPartyData.git

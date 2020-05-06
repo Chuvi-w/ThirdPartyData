@@ -5,7 +5,7 @@ if(NOT THIRD_PARTY_GIT_DIR)
  set(THIRD_PARTY_GIT_DIR /_ThirdPartyGit CACHE INTERNAL  FORCE)
 endif()
 
-
+file(REMOVE_RECURSE ${THIRD_PARTY_GIT_DIR}/ClipGit/)
 git_clone(
         PROJECT_NAME    ClipGit
         GIT_URL         https://github.com/dacap/clip.git

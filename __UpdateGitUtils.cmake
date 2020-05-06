@@ -10,7 +10,7 @@ git_clone(
         PROJECT_NAME    cmake_git_clone
         GIT_URL         https://github.com/tschuchortdev/cmake_git_clone.git
         GIT_BRANCH      master
-		DIRECTORY ${ThirdPartyCloneDir}
+		DIRECTORY ${THIRD_PARTY_GIT_DIR}
 		QUIET
 )
 

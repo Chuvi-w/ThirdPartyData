@@ -30,6 +30,6 @@ if(GumboQueryGit_CLONE_RESULT)
 	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "target_link_libraries(Gumbo_Query PUBLIC Gumbo_Parser)\n")
 	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "add_library(Gumbo::Query ALIAS Gumbo_Query)\n")
 
-	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "SET_TARGET_PROPERTIES (Gumbo_Parser PROPERTIES FOLDER Gumbo)\n")
+	file(APPEND "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "SET_TARGET_PROPERTIES (Gumbo_Query PROPERTIES FOLDER Gumbo)\n")
 	message(STATUS "Gumbo Query updated")
 endif()

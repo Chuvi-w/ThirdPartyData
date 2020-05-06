@@ -5,7 +5,7 @@ if(NOT THIRD_PARTY_GIT_DIR)
  set(THIRD_PARTY_GIT_DIR /_ThirdPartyGit CACHE INTERNAL  FORCE)
 endif()
 
-
+file(REMOVE_RECURSE ${THIRD_PARTY_GIT_DIR}/CImgGit/)
 git_clone(
         PROJECT_NAME    CImgGit
         GIT_URL         https://github.com/dtschump/CImg.git
@@ -13,7 +13,7 @@ git_clone(
         DIRECTORY ${THIRD_PARTY_GIT_DIR}
 		QUIET
 )
-set(CIMG_SrcDir "${PROJECT_SOURCE_DIR}/ThirdParty/CImg")
+
 if(CImgGit_CLONE_RESULT)
     file(REMOVE ${CMAKE_CURRENT_LIST_DIR}/CImg.h)
 	file(REMOVE ${CMAKE_CURRENT_LIST_DIR}/Licence_CeCILL_V2-en.txt)

@@ -1,3 +1,15 @@
 /Build
 /ThirdParty/cotire
 /ThirdParty/ucm
+/ThirdParty/tigr
+/ThirdParty/CImg
+/ThirdParty/clip
+/ThirdParty/GumboParser
+/ThirdParty/GumboQuery
+/ThirdParty/HttpLib
+/ThirdParty/json_dto
+/ThirdParty/md4c
+/ThirdParty/QRCodeGenerator
+/ThirdParty/Quirc
+/ThirdParty/RapidJSON
+/ThirdParty/stb

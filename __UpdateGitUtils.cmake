@@ -5,7 +5,7 @@ if(NOT THIRD_PARTY_GIT_DIR)
  set(THIRD_PARTY_GIT_DIR ${CMAKE_BINARY_DIR}/_ThirdPartyGit CACHE INTERNAL "" FORCE)
 endif()
 
-
+file(REMOVE_RECURSE ${THIRD_PARTY_GIT_DIR}/cmake_git_clone/)
 git_clone(
         PROJECT_NAME    cmake_git_clone
         GIT_URL         https://github.com/tschuchortdev/cmake_git_clone.git

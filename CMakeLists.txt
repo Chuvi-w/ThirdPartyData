@@ -12,7 +12,7 @@ if (TARGET ZLIB::ZLIB)
 	target_link_libraries(HttpLib ZLIB::ZLIB)
 endif()
 
-if (TARGET OpenSSL::SSL AND TARGET OpenSSL::Crypt)
+if (TARGET OpenSSL::SSL AND TARGET OpenSSL::Crypto)
 	target_compile_definitions(HttpLib PUBLIC CPPHTTPLIB_OPENSSL_SUPPORT )
 	target_link_libraries(HttpLib OpenSSL::SSL OpenSSL::Crypto)
 	if(WIN32)

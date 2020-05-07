@@ -17,7 +17,7 @@ git_clone(
 if(md4c_git_CLONE_RESULT)
 	file(REMOVE_RECURSE ${CMAKE_CURRENT_LIST_DIR}/src/)
 	file(REMOVE_RECURSE ${CMAKE_CURRENT_LIST_DIR}/md2html/)
-	file(GLOB MD4CFiles ${md4c_git_SOURCE_DIR}/src/*.h ${md4c_git_SOURCE_DIR}/src/*.c ${md4c_git_SOURCE_DIR}/md2html/*.h ${md4c_git_SOURCE_DIR}/md2html/*.c)
+	file(GLOB_RECURSE  MD4CFiles ${md4c_git_SOURCE_DIR}/*.h ${md4c_git_SOURCE_DIR}/*.c)
 	file(COPY ${md4c_git_SOURCE_DIR}/LICENSE.md DESTINATION ${CMAKE_CURRENT_LIST_DIR})
 	file(COPY ${MD4CFiles} DESTINATION ${CMAKE_CURRENT_LIST_DIR})
 	#file(REMOVE 	${CMAKE_CURRENT_LIST_DIR}/LICENSE.md)

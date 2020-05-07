@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.8)
+
+add_library(HttpLib STATIC httplib.cc httplib.h)
+target_include_directories(HttpLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_compile_definitions(HttpLib PUBLIC CPPHTTPLIB_USE_POLL)
+if(WIN32)
+  target_link_libraries(HttpLib ws2_32)
+endif()
+
+if (TARGET ZLIB::ZLIB)
+	target_compile_definitions(HttpLib PUBLIC CPPHTTPLIB_ZLIB_SUPPORT )
+	target_link_libraries(HttpLib ZLIB::ZLIB)
+endif()
+
+if (TARGET OpenSSL::SSL AND TARGET OpenSSL::Crypt)
+	target_compile_definitions(HttpLib PUBLIC CPPHTTPLIB_OPENSSL_SUPPORT )
+	target_link_libraries(HttpLib OpenSSL::SSL OpenSSL::Crypto)
+	if(WIN32)
+		target_link_libraries(HttpLib Crypt32)
+	endif()
+endif()

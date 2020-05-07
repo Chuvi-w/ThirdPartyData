@@ -17,7 +17,9 @@ git_clone(
 
 if(StbGit_CLONE_RESULT)
 	file(GLOB StbFiles ${CMAKE_CURRENT_LIST_DIR}/*.h ${CMAKE_CURRENT_LIST_DIR}/*.c)
-	file(REMOVE ${StbFiles})
+	if(StbFiles)
+		file(REMOVE ${StbFiles})
+	endif()
 	file(REMOVE ${CMAKE_CURRENT_LIST_DIR}/LICENSE)
 	
 	file(GLOB StbFiles ${StbGit_SOURCE_DIR}/*.h ${StbGit_SOURCE_DIR}/*.c)

@@ -16,6 +16,9 @@ git_clone(
 )
 
 if(Serial_CLONE_RESULT)
-	
+	file(REMOVE_RECURSE ${CMAKE_CURRENT_LIST_DIR}/src/)
+	file(REMOVE_RECURSE ${CMAKE_CURRENT_LIST_DIR}/include/)
+	file(COPY ${Serial_SOURCE_DIR}/src ${CMAKE_CURRENT_LIST_DIR}/src/)
+	file(COPY ${Serial_SOURCE_DIR}/include/ ${CMAKE_CURRENT_LIST_DIR}/include/)
 	message(STATUS "Serial updated")
 endif()

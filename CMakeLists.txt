@@ -18,7 +18,6 @@ else ()
     list(APPEND serial_SRCS src/impl/list_ports/list_ports_win.cc)
 endif ()
 
- list(APPEND serial_SRCS CSerial.cpp)
  
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 add_library(serial STATIC ${serial_SRCS})

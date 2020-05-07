@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 
 add_library(HttpLib STATIC httplib.cc httplib.h)
 target_include_directories(HttpLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_compile_definitions(HttpLib PUBLIC CPPHTTPLIB_USE_POLL)
+#target_compile_definitions(HttpLib PUBLIC CPPHTTPLIB_USE_POLL)
 if(WIN32)
   target_link_libraries(HttpLib ws2_32)
 endif()

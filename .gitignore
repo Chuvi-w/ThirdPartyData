@@ -13,3 +13,5 @@
 /ThirdParty/Quirc
 /ThirdParty/RapidJSON
 /ThirdParty/stb
+/ThirdParty/serial
+/ThirdParty/asio

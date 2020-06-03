@@ -71,6 +71,7 @@ set(SKIP_UPDADE_asio TRUE)
 #AddThirdPartyMod(serial)
 #AddThirdPartyMod(tigr)
 #AddThirdPartyMod(asio)
+#AddThirdPartyMod(TinyXML2)
 ListThirdPartyModsSkipVars()
 UpdateThirdPartyMods()
 

@@ -6,3 +6,7 @@ target_include_directories(CImg INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 if(OpenMP_CXX_FOUND)
     target_link_libraries(CImg INTERFACE OpenMP::OpenMP_CXX)
 endif()
+
+add_library(CImgAll INTERFACE)
+target_include_directories(CImgAll INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_precompile_headers(CImgAll INTERFACE CImgAll.h)

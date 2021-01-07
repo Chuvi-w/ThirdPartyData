@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 3.15)
 #THIRD_PARTY_UPDATE_SCRIPT SKIP_UPDADE_GumboParser
 
 if(NOT THIRD_PARTY_GIT_DIR)
@@ -21,7 +21,7 @@ if(GumboParserGit_CLONE_RESULT)
 	file(COPY ${GumboParserGit_SOURCE_DIR}/visualc/include DESTINATION ${CMAKE_CURRENT_LIST_DIR}/visualc/)
 	file(COPY ${GumboParserGit_SOURCE_DIR}/COPYING DESTINATION ${CMAKE_CURRENT_LIST_DIR})
 	file(COPY ${GumboParserGit_SOURCE_DIR}/THANKS DESTINATION ${CMAKE_CURRENT_LIST_DIR})
-	file(WRITE "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "cmake_minimum_required(VERSION 2.8.7)\n\nadd_library(Gumbo_Parser STATIC\n") 
+	file(WRITE "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "cmake_minimum_required(VERSION 3.15)\n\nadd_library(Gumbo_Parser STATIC\n") 
 	
 	foreach(gpf ${GumboParserFiles})
 		file(RELATIVE_PATH gpf "${GumboParserGit_SOURCE_DIR}/src/" ${gpf})

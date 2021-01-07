@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.15)
 find_package(OpenGL)
 
 add_library(tigr STATIC tigr.c tigr.h glext.h wglext.h KHR/khrplatform.h)

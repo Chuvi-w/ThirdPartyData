@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.15)
 
 add_library(QrCode STATIC QrCode.cpp QrCode.hpp)
 target_include_directories(QrCode PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

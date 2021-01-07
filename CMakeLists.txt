@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.15)
 find_package(OpenMP)
 add_library(CImg INTERFACE)
 target_include_directories(CImg INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})

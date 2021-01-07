@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15)
 
 if(NOT COMMAND git_clone)
 	message(FATAL_ERROR "git_clone command not exist")

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 3.15)
 #THIRD_PARTY_UPDATE_SCRIPT SKIP_UPDADE_GumboQuery
 
 if(NOT THIRD_PARTY_GIT_DIR)
@@ -19,7 +19,7 @@ if(GumboQueryGit_CLONE_RESULT)
 	file(GLOB GumboQueryFiles ${GumboQueryGit_SOURCE_DIR}/src/*.h ${GumboQueryGit_SOURCE_DIR}/src/*.cpp)
 	file(COPY ${GumboQueryFiles} DESTINATION ${CMAKE_CURRENT_LIST_DIR}/)
 	file(COPY ${GumboQueryGit_SOURCE_DIR}/LICENSE DESTINATION ${CMAKE_CURRENT_LIST_DIR})
-	file(WRITE "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "cmake_minimum_required(VERSION 2.8.7)\n\nadd_library(Gumbo_Query STATIC\n") 
+	file(WRITE "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" "cmake_minimum_required(VERSION 3.15)\n\nadd_library(Gumbo_Query STATIC\n") 
 	
 	foreach(gpf ${GumboQueryFiles})
 		file(RELATIVE_PATH gpf "${GumboQueryGit_SOURCE_DIR}/src/" ${gpf})
